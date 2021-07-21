@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-8 mx-auto py-5">
+    <h1>Add a new restaurant</h1>
+
+    <div class="my-3 p-2 border border-rounded">
+
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :category, collection: Restaurant::CATEGORY  %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

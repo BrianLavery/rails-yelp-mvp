@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-8 mx-auto py-5">
+    <h1>Restaurants</h1>
+
+    <% @restaurants.each do |restaurant| %>
+    <div class="my-3 p-2 border border-rounded">
+
+      <div class="card-restaurant d-flex justify-content-between">
+
+        <div class="restaurant-content">
+          <%= link_to restaurant_path(restaurant) do %>
+            <h2><%= restaurant.name %></h2>
+          <% end %>
+          <p><strong>Category: </strong><%= restaurant.category.capitalize  %></p>
+          <p><strong>Address: </strong><small><%= restaurant.address %></small></p>
+          <p><strong>Phone number: </strong><small><%= restaurant.phone_number %></small></p>
+        </div>
+
+        <div class="restaurant-buttons">
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+

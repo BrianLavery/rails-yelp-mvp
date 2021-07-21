@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-lg-8 mx-auto py-5">
+    <h1><%= @restaurant.name %></h1>
+
+    <div class="restaurant-info">
+      <p><strong>Category: </strong><%= @restaurant.category.capitalize  %></p>
+      <p><strong>Address: </strong><small><%= @restaurant.address %></small></p>
+      <p><strong>Phone number: </strong><small><%= @restaurant.phone_number %></small></p>
+    </div>
+
+    <div class="my-3 p-2 border border-rounded">
+
+
+      <div class="reviews">
+        <% @restaurant.reviews.each do |review| %>
+        <div class="review-content">
+          <%= review.rating %>
+          <%= review.content %>
+        </div>
+        <% end %>
+
+        <div class="review-button">
+          <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: 'btn btn-light' %>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="review-button">
+      <%= link_to "Back to restaurants", restaurants_path, class: 'btn btn-light' %>
+    </div>
+  </div>
+</div>

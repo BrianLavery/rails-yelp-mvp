@@ -1,0 +1,25 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body, h1, h2, h3, p, a {
+  margin: 0;
+}
+
+.restaurant-buttons {
+  flex: 0 1 content;
+}
+
+.restaurant-content {
+  flex: 1 0 auto;
+}

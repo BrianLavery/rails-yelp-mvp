@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-lg-8 mx-auto py-5">
+    <h1><%= @restaurant.name %>: Add a new review</h1>
+
+    <div class="my-3 p-2 border border-rounded">
+
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5]  %>
+        <%= f.input :content %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
