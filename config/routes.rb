@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'restaurants#index'
   get 'reviews/new'
   get 'reviews/create'
   get 'restaurants/index'
